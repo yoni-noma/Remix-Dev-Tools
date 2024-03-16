@@ -94,7 +94,7 @@ export const remixDevTools: (args?:RemixViteConfig) => Plugin[] = (args) => {
           server.hot.on("open-source", (data) => { 
           const source = data.data.source; 
           const line = data.data.line;
-          exec(`code -g "${normalizePath(source)}:${line}"`)
+          exec(`webstorm -g "${normalizePath(source)}:${line}"`)
           })
         }
       },
